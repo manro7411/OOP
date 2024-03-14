@@ -10,9 +10,63 @@ public class recap {
             }
             System.out.println(temp);
             result(number);
+
+            Company e1 = new Company();
+            e1.setName("Ratchanon");
+            e1.setLname("Traitiprat");
+            e1.display();
+
+            
         }
         public static void result(int num){
             System.out.println(num);
         }
+    
+}
+class Company{
+    int id;
+    String name;
+    String lname;
+    String department;
+    double salary;
+    public void company(int id,String name,String lname){
+        this.id =id;
+        this.name = name;
+        this.lname = lname;
+
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getLname() {
+        return lname;
+    }
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+    public String getDepartment() {
+        return department;
+    }
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public void display(){
+        System.out.println(this.name+this.lname);
+    }
     
 }
