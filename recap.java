@@ -66,7 +66,17 @@ class Company{
         this.salary = salary;
     }
     public void display(){
-        System.out.println(this.name+this.lname);
+        System.out.println("Firstname : "+this.name+"Lastname : "+this.lname);
     }
-    
+}
+class Career extends Company{
+    private String skills;
+
+    public void skill(String skill){
+        System.out.println("Skill : "+skill);
+
+    }
+    public void bonus(int number){
+
+    }
 }
