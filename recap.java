@@ -1,8 +1,9 @@
 import java.util.*;;
 public class recap {
         public static void main(String[] args) {
+            @SuppressWarnings("resource")
             Scanner sc = new Scanner(System.in);
-            System.out.print("Please inset the limited number");
+            System.out.print("Please inset security number ");
             int number = sc.nextInt();
             int temp=0;
             for (int i = 1; i <= number; i++) {
@@ -11,12 +12,15 @@ public class recap {
             System.out.println(temp);
             result(number);
 
-            Company e1 = new Company();
-            e1.setName("Ratchanon");
-            e1.setLname("Traitiprat");
-            e1.display();
-
-            
+            if (number == 192 ) {
+                Company e1 = new Company();
+                Career c1 = new Career();
+                c1.bonus(20000);
+                e1.company(1, "Ratchanon", "Traitiprat");;
+                e1.display();
+            }else{
+                System.out.println("Can't access our main system");
+            }            
         }
         public static void result(int num){
             System.out.println(num);
@@ -66,17 +70,17 @@ class Company{
         this.salary = salary;
     }
     public void display(){
-        System.out.println("Firstname : "+this.name+"Lastname : "+this.lname);
+        System.out.println("Firstname : "+this.name+" Lastname : "+this.lname);
     }
 }
 class Career extends Company{
-    private String skills;
-
     public void skill(String skill){
         System.out.println("Skill : "+skill);
 
     }
     public void bonus(int number){
+        System.out.println("You will get extra bonus : "+ number);
 
     }
+    
 }
